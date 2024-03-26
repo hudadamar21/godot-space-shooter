@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://te73km0hk45v"]
+
+[ext_resource type="Script" path="res://meteor.gd" id="1_untn5"]
+[ext_resource type="AudioStream" uid="uid://bojhquiufq3ow" path="res://audio/sfx_shieldUp.ogg" id="2_jugbg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rxm5i"]
+load_path = "res://.godot/imported/1.png-737cfd4dc505815aa9af0c6ca209fe30.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e4ars"]
+radius = 42.0119
+
+[node name="Meteor" type="Area2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_untn5")
+
+[node name="MeteorImage" type="Sprite2D" parent="."]
+visibility_layer = 3
+texture = SubResource("CompressedTexture2D_rxm5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e4ars")
+
+[node name="MeteorDestroyedSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jugbg")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

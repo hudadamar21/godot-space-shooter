@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqc06fswkyu2i"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_xbcbh"]
+[ext_resource type="PackedScene" uid="uid://cgrhqbsgdg1c2" path="res://level.tscn" id="2_p0p4y"]
+[ext_resource type="FontFile" uid="uid://hejx5kr4k0w8" path="res://audio/kenvector_future_thin.ttf" id="3_lme5b"]
+[ext_resource type="AudioStream" uid="uid://crpecstfrk254" path="res://audio/sfx_lose.ogg" id="3_mq7h4"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xbcbh")
+level_scene = ExtResource("2_p0p4y")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(32.124, 18.0397)
+color = Color(0.0745568, 0.143154, 0.27337, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -20.0
+offset_right = 46.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_lme5b")
+theme_override_font_sizes/font_size = 71
+text = "GAME OVER"
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_lme5b")
+theme_override_font_sizes/font_size = 30
+text = "Score: "
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.5
+offset_top = -23.0
+offset_right = 100.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 25
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_lme5b")
+theme_override_font_sizes/font_size = 24
+text = "Press Space to Start Again"
+
+[node name="LoseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mq7h4")
+volume_db = 7.0
+pitch_scale = 0.83
