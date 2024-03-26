@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://level.gd" id="1_7uut6"]
 [ext_resource type="PackedScene" uid="uid://c1iaaf4mc2v78" path="res://player.tscn" id="1_cnu4u"]
-[ext_resource type="Texture2D" uid="uid://bjurc6ns8uldl" path="res://graphics/PNG/Effects/star2.png" id="4_0gmfx"]
-[ext_resource type="Texture2D" uid="uid://c55vpv8papki4" path="res://graphics/PNG/Effects/star1.png" id="5_a68yq"]
+[ext_resource type="Texture2D" uid="uid://c55vpv8papki4" path="res://graphics/Effects/star1.png" id="2_t1dic"]
+[ext_resource type="Texture2D" uid="uid://bjurc6ns8uldl" path="res://graphics/Effects/star2.png" id="3_hnyxx"]
+[ext_resource type="Texture2D" uid="uid://c3ysvcjfscmbr" path="res://graphics/Effects/star3.png" id="4_4k7kw"]
 [ext_resource type="PackedScene" uid="uid://c3i4ho62b5gxr" path="res://ui.tscn" id="6_5lgpl"]
-[ext_resource type="Texture2D" uid="uid://c3ysvcjfscmbr" path="res://graphics/PNG/Effects/star3.png" id="6_klmvk"]
 [ext_resource type="AudioStream" uid="uid://wxnj4558rpnj" path="res://audio/backsound.ogg" id="7_g51b4"]
 [ext_resource type="AudioStream" uid="uid://bj53gqsso5jq6" path="res://audio/sfx_shieldDown.ogg" id="8_2hu01"]
 
@@ -13,13 +13,13 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_a68yq")
+"texture": ExtResource("2_t1dic")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_0gmfx")
+"texture": ExtResource("3_hnyxx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_klmvk")
+"texture": ExtResource("4_4k7kw")
 }],
 "loop": true,
 "name": &"default",

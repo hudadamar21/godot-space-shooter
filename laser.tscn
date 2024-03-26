@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bv1vt3y14neux"]
 
 [ext_resource type="Script" path="res://laser.gd" id="1_047a8"]
-[ext_resource type="Texture2D" uid="uid://ccl18y15jirv8" path="res://graphics/PNG/Lasers/laserRed01.png" id="1_x1sq6"]
+[ext_resource type="Texture2D" uid="uid://ccl18y15jirv8" path="res://graphics/laserRed01.png" id="1_x1sq6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cbro4"]
 radius = 5.0

@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-static var image = load("res://graphics/PNG/UI/playerLife2_red.png")
+static var image = load("res://graphics/playerLife2_red.png")
 
 #var time_elapsed := 0 
 

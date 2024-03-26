@@ -11,7 +11,7 @@ func _ready():
 	var rng := RandomNumberGenerator.new()
 	
 	# texture
-	var path = "res://graphics/PNG/Meteors/"+ str(rng.randi_range(1,8)) +".png"
+	var path = "res://graphics/Meteors/"+ str(rng.randi_range(1,8)) +".png"
 	$MeteorImage.texture = load(path)
 	
 	# start position
@@ -38,9 +38,10 @@ func _on_area_entered(area):
 	area.queue_free()
 	Global.score += 1
 	$MeteorDestroyedSound.play()
-	$MeteorImage.texture = load("res://graphics/PNG/Damage/playerShip1_damage2.png")
-	await get_tree().create_timer(0.1).timeout
+	$MeteorImage.texture = load("res://graphics/playerShip3_damage2.png")
+	$MeteorImage.scale = Vector2(1.5, 1.5)
+	await get_tree().create_timer(0.05).timeout
 	$MeteorImage.hide()
 	can_collide = false
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.5).timeout
 	queue_free()
